@@ -6,7 +6,7 @@ from openai import OpenAI
 app = FastAPI()
 load_dotenv()
 client= OpenAI()
-print("OPENAI_API_KEY exists:", bppl(os.getenv("OPENAI_API_KEY")))
+print("OPENAI_API_KEY exists:", bool(os.getenv("OPENAI_API_KEY")))
 
 class Student(BaseModel):
     name: str
